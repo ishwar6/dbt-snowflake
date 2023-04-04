@@ -1,0 +1,34 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "*": {
+        "@": "&1.&"
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "*": "[]"
+    }
+  }
+]
+
+
+{
+  "column1": "value1",
+  "column2": "value2",
+  "column3": "value3",
+  "column4": "value4"
+}to
+
+[ {
+  "column1" : "value1"
+}, {
+  "column2" : "value2"
+}, {
+  "column3" : "value3"
+}, {
+  "column4" : "value4"
+} ]
