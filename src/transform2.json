@@ -32,3 +32,19 @@
 }, {
   "column4" : "value4"
 } ]
+
+
+#to remove specific column
+
+[{
+  "operation": "shift",
+  "spec": {
+    "*": {
+      "IP ADDRESS": "[&1].IP ADDRESS",
+      "HOSTHAME": "[&1].HOSTHAME"
+    }
+  }
+}]
+
+
+
