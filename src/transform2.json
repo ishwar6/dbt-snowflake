@@ -1,0 +1,50 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "*": {
+        "@": "&1.&"
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "*": "[]"
+    }
+  }
+]
+
+
+{
+  "column1": "value1",
+  "column2": "value2",
+  "column3": "value3",
+  "column4": "value4"
+}to
+
+[ {
+  "column1" : "value1"
+}, {
+  "column2" : "value2"
+}, {
+  "column3" : "value3"
+}, {
+  "column4" : "value4"
+} ]
+
+
+#to remove specific column
+
+[{
+  "operation": "shift",
+  "spec": {
+    "*": {
+      "IP ADDRESS": "[&1].IP ADDRESS",
+      "HOSTHAME": "[&1].HOSTHAME"
+    }
+  }
+}]
+
+
+

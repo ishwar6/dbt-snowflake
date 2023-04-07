@@ -1,0 +1,23 @@
+[
+  {
+    "operation": "shift",
+    "spec": {
+      "*": {
+        "APP_ID": "temp[&1].id",
+        "APP_FULL_NAME": "temp[&1].APP_FULL_NAME.value",
+        "APP_MGR_FNAME": "temp[&1].APP_MGR_FNAME.value"
+      }
+    }
+  },
+  {
+    "operation": "shift",
+    "spec": {
+      "temp": {
+        "*": {
+          "APP_FULL_NAME": "vertices.AIT.@(1,id).APP_FULL_NAME",
+          "APP_MGR_FNAME": "vertices.AIT.@(1,id).APP_MGR_FNAME"
+        }
+      }
+    }
+  }
+]
