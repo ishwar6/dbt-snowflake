@@ -34,6 +34,6 @@ AS '
     return [schema_name].concat(array.map(col => col.toLowerCase()));
 ';
 
-v2_sqlText = `SELECT 'SELECT ' || LISTAGG(COALESCE(` + qry_col + `, '''n/a''') || ' AS ' || output, ', ') || ' FROM ' || '` + 
-  FULL_TABLE_NAME.toString() + `' || ' GROUP BY ' || REPLACE(` + group_by_cols + `, '"', '') || '\\' AS query FROM test.test_schmea.learn`;
+v2_sqlText = "SELECT 'SELECT ' || LISTAGG(COALESCE(" + qry_col + ", ''n/a'') || ' AS ' || output, ', ') || ' FROM ' || '" + 
+  FULL_TABLE_NAME.toString() + "' || ' GROUP BY ' || " + group_by_cols + " || '\\'' AS query   test.test_schmea.learn`;
 
