@@ -35,5 +35,8 @@ AS '
 ';
 
 v2_sqlText = "SELECT 'SELECT ' || LISTAGG(COALESCE(" + qry_col + ", ''n/a'') || ' AS ' || output, ', ') || ' FROM ' || '" + 
-  FULL_TABLE_NAME.toString() + "' || ' GROUP BY ' || " + group_by_cols + " || '\\'' AS query   test.test_schmea.learn`;
+  FULL_TABLE_NAME.toString() + "' || ' GROUP BY ' || " + group_by_cols + " || '\\'' AS query from  test.test_schmea.learn`;
+  
+  var v2_sqlText = `SELECT 'SELECT ' || LISTAGG(COALESCE(${qry_col}, 'n/a') || ' AS ' || output, ', ') || ' FROM ${FULL_TABLE_NAME} GROUP BY ${modified_group_by_cols}' 
+  AS query FROM  test.test_schmea.learn`;
 
