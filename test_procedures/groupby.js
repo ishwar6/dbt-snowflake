@@ -36,4 +36,7 @@ var combined_cols = non_numeric_cols + ', ' + numeric_cols;
  
 v2_sqlText = `SELECT 'SELECT ' || '` + combined_cols + `' || ' FROM ' || '` + FULL_TABLE_NAME.toString() + `' || ' GROUP BY ` + group_by_cols + `\\'' as query`;
 
+
+v2_sqlText = `SELECT "SELECT " || '` + combined_cols + `' || " FROM " || '` + FULL_TABLE_NAME.toString() + `' || " GROUP BY " + group_by_cols + " " as query`;
+
  
